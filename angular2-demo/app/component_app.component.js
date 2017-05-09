@@ -11,29 +11,31 @@ System.register(["angular2/core"], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent;
+    var App;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            //framework recognizes @Component annotation and knows that we are trying to create a new component
+            App = (function () {
+                function App() {
                 }
-                AppComponent = __decorate([
+                App = __decorate([
                     core_1.Component({
-                        selector: 'my-app'
+                        selector: 'my-app' //specifies selector for HTML element named 'app'
                     }),
                     core_1.View({
-                        template: '<h2>My First Angular 2 App</h2>'
+                        //template property holds component's companion template that tells Angular how to render a view
+                        template: '<h2>Welcome to {{name}}</h2>'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], App);
+                return App;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("App", App);
         }
     }
 });
-//# sourceMappingURL=environment_app.component.js.map
+//# sourceMappingURL=component_app.component.js.map

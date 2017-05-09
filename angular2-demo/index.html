@@ -10,6 +10,7 @@
     <script src="https://code.angularjs.org/tools/typescript.js"></script>
     <script src="https://code.angularjs.org/2.0.0-beta.6/Rx.js"></script>
     <script src="https://code.angularjs.org/2.0.0-beta.6/angular2.dev.js"></script>
+
     <script>
         System.config({
             transpiler: 'typescript',
@@ -25,7 +26,7 @@
                 'app': './angular2/src/app'
             }
         });
-        System.import('/app/hello_world_main.js')
+        System.import('/app/metadata_main.ts')
             .then(null, console.error.bind(console));
     </script>
 </head>
